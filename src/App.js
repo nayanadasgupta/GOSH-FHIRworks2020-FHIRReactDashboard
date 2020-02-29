@@ -1,26 +1,37 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Number from "./components/Number";
+import {patientJSONtoList} from "./utils";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const https = require("https");
+
+const options = {
+    agent: new https.Agent({
+        rejectUnauthorized: false
+    })
+};
+
+class App extends Component {
+  constructor() {
+      super();
+      this.state = {
+          patients: ['1', '2', '3']
+      };
+  }
+  componentDidMount() {
+    fetch("https://localhost:5001/api/Patient/",options)
+        .then(response => response.json())
+        .then(data => {
+          this.setState(
+              {patients: patientJSONtoList(data)}
+              )
+        })
+    }
+
+  render() {
+    return(<Number allPatients={this.state.patients}/>)
+  }
 }
 
 export default App;
