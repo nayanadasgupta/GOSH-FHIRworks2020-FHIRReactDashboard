@@ -114,7 +114,7 @@ class App extends Component {
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6">
-                        FHIR
+                        FHIR Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -124,12 +124,7 @@ class App extends Component {
                         <Number data={findPatientCount(this.state.patients)}/>
                     </Paper>
                 </Grid>
-                <Grid item xs = {3}>
-                    <Paper padding={2}>
-                        <ChartBar dataName = "Race" data={findRaceProportions(this.state.patients)}/>
-                    </Paper>
-                </Grid>
-                <Grid item xs ={6}>
+                <Grid item xs ={9}>
                     <Paper padding={2} >
                         <ChartArea dataName = "Languages" data={findLanguageProportions(this.state.patients)}/>
                     </Paper>
@@ -145,6 +140,13 @@ class App extends Component {
                     <Paper padding={2}>
                         <ChartBar dataName = "Average Quality Adjusted Life Years By Gender" data={qualLifeGender(this.state.patients)}/>
                     </Paper>
+                </Grid>
+                <Grid container spacing={3}>
+                    <Grid item xs = {12}>
+                        <Paper padding={2}>
+                            <ChartBar dataName = "Race" data={findRaceProportions(this.state.patients)}/>
+                        </Paper>
+                    </Grid>
                 </Grid>
             </Grid>
         </div>)

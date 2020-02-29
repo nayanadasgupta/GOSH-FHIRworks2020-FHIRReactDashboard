@@ -37,6 +37,7 @@ export function patientJSONtoList (rawPatients)
             if (rawEntries[j]['resource']['extension'][5]['url'] === 'http://synthetichealth.github.io/synthea/disability-adjusted-life-years')
             {
                 patient['disLifeYears'] = rawEntries[j]['resource']['extension'][5]['valueDecimal'];
+                console.log(patient['disLifeYears']);
             }
             if (rawEntries[j]['resource']['extension'][6]['url'] === 'http://synthetichealth.github.io/synthea/quality-adjusted-life-years')
             {
@@ -166,7 +167,6 @@ export function qualLifeGender(patientsList)
     {
         sumQualLifeDict[key] = sumQualLifeDict[key]/genderCountDict[key]
     }
-    console.log(sumQualLifeDict);
     return sumQualLifeDict;
 }
 
@@ -187,16 +187,18 @@ const options = {
     })
 };
 
-export function getSmokerProp(patientsList)
-{
-    let patientIDList = getListOfPatientIDs();
-    for (let i = 0; i < patientIDList; i++)
-    {
-        let observationData = {};
-        fetch("https://localhost:5001/api/Observation/" + patientIDList[i],options)
-            .then(response => response.json())
-            .then(data => observationData)
-        let entry = observationData['entry']
-    }
+// TODO: disLifeGender Graph
 
-}
+// export function getSmokerProp(patientsList)
+// {
+//     let patientIDList = getListOfPatientIDs();
+//     for (let i = 0; i < patientIDList; i++)
+//     {
+//         let observationData = {};
+//         fetch("https://localhost:5001/api/Observation/" + patientIDList[i],options)
+//             .then(response => response.json())
+//             .then(data => observationData)
+//         let entry = observationData['entry']
+//     }
+//
+// }
