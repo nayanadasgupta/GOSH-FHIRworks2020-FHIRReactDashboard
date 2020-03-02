@@ -1,14 +1,20 @@
+var patientCount = 0;
+
 export function patientJSONtoList (rawPatients)
 {
-    //TODO: GET SERVER VERSION
     let patients = [];
+    //104 bundles
     for (let i = 0; i < rawPatients.length; i++) {
+        console.log(rawPatients.count);
         let patient = {};
+        // iterating over each bundle
         let rawPatientsList = rawPatients[i];
+        //looking at the entry part of each bundle
         let rawEntries = rawPatientsList['entry'];
+        //getting data of each patient in entry part
         for (let j = 0; j < rawEntries.length; j++)
         {
-            // TODO: Need to check all ks as the urls could be in different positions
+            patientCount += 1;
             // TODO: Check: Taking Medical Record Number to be ID!!!!!
             patient['id'] = (rawEntries[j]['resource']['id']);
             if (rawEntries[j]['resource']['extension'][0]['url'] === 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')
@@ -33,11 +39,10 @@ export function patientJSONtoList (rawPatients)
                 patient['birthState'] = rawEntries[j]['resource']['extension'][4]['valueAddress']['state'];
                 patient['birthCountry'] = rawEntries[j]['resource']['extension'][4]['valueAddress']['country'];
             }
-            //TODO: float values are rounded to integers!!!!!!!!!
+
             if (rawEntries[j]['resource']['extension'][5]['url'] === 'http://synthetichealth.github.io/synthea/disability-adjusted-life-years')
             {
                 patient['disLifeYears'] = rawEntries[j]['resource']['extension'][5]['valueDecimal'];
-                console.log(patient['disLifeYears']);
             }
             if (rawEntries[j]['resource']['extension'][6]['url'] === 'http://synthetichealth.github.io/synthea/quality-adjusted-life-years')
             {
@@ -47,21 +52,6 @@ export function patientJSONtoList (rawPatients)
             {
                 patient['socialSecurity'] = rawEntries[j]['resource']['identifier'][2]['value'];
             }
-
-            // TODO: Don't work - drivers licence and passport number
-
-            // if (rawEntries[j]['resource']['identifier'][3]['type']['text'] === 'Driver\'s License')
-            // {
-            //     patient['drivers'] = rawEntries[j]['resource']['identifier'][3]['value'];
-            // }
-            // if (rawEntries[j]['resource']['identifier'][3]['type']['text'] === 'Driver\'s License')
-            // {
-            //     patient['driversLicence'] = rawEntries[j]['resource']['identifier'][3]['value'];
-            // }
-            // if (rawEntries[j]['resource']['identifier'][4]['type']['text'] === 'Passport Number')
-            // {
-            //     patient['passportNo'] = rawEntries[j]['resource']['identifier'][4]['value'];
-            // }
 
             patient['familyName'] = rawEntries[j]['resource']['name'][0]['family'];
             // list of given names
@@ -89,8 +79,8 @@ export function patientJSONtoList (rawPatients)
 
             patient['language'] = rawEntries[j]['resource']['communication'][0]['language']['text'];
 
+            patients.push(patient)
         }
-        patients.push(patient)
     }
     return patients;
 }
@@ -170,15 +160,74 @@ export function qualLifeGender(patientsList)
     return sumQualLifeDict;
 }
 
-function getListOfPatientIDs(patientsList)
+export function disLifeGender(patientsList)
 {
-    let patientIDList = [];
+    let genderCountDict = findGenderProportions(patientsList);
+    let sumDisLifeDict = {};
     for (let i = 0; i < patientsList.length; i++)
     {
-        patientIDList.push(patientsList[i]['id']);
+        if (typeof sumDisLifeDict[patientsList[i]['gender']] == 'undefined')
+        {
+            sumDisLifeDict[patientsList[i]['gender']] = patientsList[i]['disLifeYears']
+        }
+        else
+        {
+            sumDisLifeDict[patientsList[i]['gender']] += patientsList[i]['disLifeYears']
+        }
     }
-    return patientIDList;
+    for (var key in sumDisLifeDict)
+    {
+        sumDisLifeDict[key] = sumDisLifeDict[key]/genderCountDict[key]
+    }
+    return sumDisLifeDict;
 }
+
+export function disLifeRace(patientsList)
+{
+    let raceCountDict = findRaceProportions(patientsList);
+    let sumDisLifeDict = {};
+    for (let i = 0; i < patientsList.length; i++)
+    {
+        if (typeof sumDisLifeDict[patientsList[i]['race']] == 'undefined')
+        {
+            sumDisLifeDict[patientsList[i]['race']] = patientsList[i]['disLifeYears']
+        }
+        else
+        {
+            sumDisLifeDict[patientsList[i]['race']] += patientsList[i]['disLifeYears']
+        }
+    }
+    for (var key in sumDisLifeDict)
+    {
+        sumDisLifeDict[key] = sumDisLifeDict[key]/raceCountDict[key]
+    }
+    return sumDisLifeDict;
+}
+
+export function qualLifeRace(patientsList)
+{
+    let raceCountDict = findRaceProportions(patientsList);
+    let sumQualLifeDict = {};
+    for (let i = 0; i < patientsList.length; i++)
+    {
+        if (typeof sumQualLifeDict[patientsList[i]['race']] == 'undefined')
+        {
+            sumQualLifeDict[patientsList[i]['race']] = patientsList[i]['qualLifeYears']
+        }
+        else
+        {
+            sumQualLifeDict[patientsList[i]['race']] += patientsList[i]['qualLifeYears']
+        }
+    }
+    for (var key in sumQualLifeDict)
+    {
+        sumQualLifeDict[key] = sumQualLifeDict[key]/raceCountDict[key]
+    }
+    return sumQualLifeDict;
+}
+
+
+
 
 const https = require("https");
 const options = {
@@ -189,16 +238,5 @@ const options = {
 
 // TODO: disLifeGender Graph
 
-// export function getSmokerProp(patientsList)
-// {
-//     let patientIDList = getListOfPatientIDs();
-//     for (let i = 0; i < patientIDList; i++)
-//     {
-//         let observationData = {};
-//         fetch("https://localhost:5001/api/Observation/" + patientIDList[i],options)
-//             .then(response => response.json())
-//             .then(data => observationData)
-//         let entry = observationData['entry']
-//     }
-//
-// }
+
+

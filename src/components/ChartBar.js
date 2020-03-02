@@ -28,6 +28,7 @@ class ChartBar extends Component {
             datumDict['Count'] = dataDict[key];
             dataList.push(datumDict);
         }
+
         return(
             <div>
                 <ResponsiveContainer height={400} width="95%" >

@@ -9,7 +9,13 @@ import logo from './logo.svg';
 import './App.css';
 import Number from "./components/Number";
 import ChartPie from "./components/PieChart";
-import {findGenderProportions, findLanguageProportions, patientJSONtoList, qualLifeGender} from "./utils";
+import {
+    disLifeGender, disLifeRace,
+    findGenderProportions,
+    findLanguageProportions,
+    patientJSONtoList,
+    qualLifeGender, qualLifeRace
+} from "./utils";
 import {findRaceProportions} from "./utils"
 import {findPatientCount} from "./utils";
 import IconButton from "@material-ui/core/IconButton";
@@ -114,7 +120,7 @@ class App extends Component {
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6">
-                        FHIR Dashboard
+                        FHIR Overview
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -126,7 +132,7 @@ class App extends Component {
                 </Grid>
                 <Grid item xs ={9}>
                     <Paper padding={2} >
-                        <ChartArea dataName = "Languages" data={findLanguageProportions(this.state.patients)}/>
+                        <ChartBar dataName = "Race" data={findRaceProportions(this.state.patients)}/>
                     </Paper>
                 </Grid>
             </Grid>
@@ -144,7 +150,26 @@ class App extends Component {
                 <Grid container spacing={3}>
                     <Grid item xs = {12}>
                         <Paper padding={2}>
-                            <ChartBar dataName = "Race" data={findRaceProportions(this.state.patients)}/>
+                            <ChartArea dataName = "Languages" data={findLanguageProportions(this.state.patients)}/>
+                        </Paper>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={3}>
+                    <Grid item xs = {12}>
+                        <Paper padding={2}>
+                            <ChartBar dataName = "Average Disability Adjusted Life Years By Gender" data={disLifeGender(this.state.patients)}/>
+                        </Paper>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={3}>
+                    <Grid item xs = {6}>
+                        <Paper padding={2}>
+                            <ChartArea dataName = "Average Disability Adjusted Life Years By Race" data={disLifeRace(this.state.patients)}/>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs = {6}>
+                        <Paper padding={2}>
+                            <ChartArea dataName = "Average Quality Adjusted Life Years By Race" data={qualLifeRace(this.state.patients)}/>
                         </Paper>
                     </Grid>
                 </Grid>
