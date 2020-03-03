@@ -1,12 +1,6 @@
 import React, {Component} from 'react';
 import {
-    PieChart,
-    Pie,
-    Sector,
-    Cell,
     BarChart,
-    LineChart,
-    Line,
     CartesianGrid,
     XAxis,
     YAxis,
@@ -28,7 +22,6 @@ class ChartBar extends Component {
             datumDict['Count'] = dataDict[key];
             dataList.push(datumDict);
         }
-
         return(
             <div>
                 <ResponsiveContainer height={400} width="95%" >

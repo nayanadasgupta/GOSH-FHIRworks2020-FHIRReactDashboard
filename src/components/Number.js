@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import ReactDom from "react-dom"
 import Typography from "@material-ui/core/Typography";
-import Toolbar from "@material-ui/core/Toolbar";
 
 
 class Number extends Component {

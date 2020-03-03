@@ -2,17 +2,10 @@ import React, {Component} from 'react';
 import {
     PieChart,
     Pie,
-    Sector,
     Cell,
-    BarChart,
-    LineChart,
-    Line,
-    CartesianGrid,
-    XAxis,
-    YAxis,
     Legend,
     ResponsiveContainer,
-    Tooltip, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar,
+    Tooltip,
 } from 'recharts';
 import Typography from "@material-ui/core/Typography";
 
@@ -35,7 +28,8 @@ class ChartPie extends Component {
             <ResponsiveContainer height={400} width="90%">
                 <PieChart>
                     <Pie height = {300} dataKey="value" startAngle={180} paddingAngle={5} endAngle={0} data={dataList} cx={300} cy={250} outerRadius="90%" fill="#8884d8" label>
-                        {dataList.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)}</Pie>
+                        {dataList.map((entry, index) => <Cell key={entry} fill={COLORS[index % COLORS.length]}/>)}
+                    </Pie>
                     <Legend align="bottom" layout={'horizontal'} height={36}/>
                     <Tooltip />
                 </PieChart>

@@ -1,18 +1,10 @@
 import React, {Component} from 'react';
 import {
-    PieChart,
-    Pie,
-    Sector,
-    Cell,
-    BarChart,
-    LineChart,
-    Line,
     CartesianGrid,
     XAxis,
     YAxis,
-    Legend,
     ResponsiveContainer,
-    Tooltip, Bar, AreaChart, Area,
+    Tooltip, AreaChart, Area,
 } from 'recharts';
 import Typography from "@material-ui/core/Typography";
 
@@ -29,7 +21,7 @@ class ChartArea extends Component {
         return (
 
             <div>
-                <ResponsiveContainer height={400} width="95%">
+                <ResponsiveContainer height={400} width="100%">
                 <AreaChart
                     width={500}
                     height={400}
@@ -42,7 +34,7 @@ class ChartArea extends Component {
                     <XAxis dataKey="Name" />
                     <YAxis />
                     <Tooltip />
-                    <Area type="monotone" dataKey="Count" stroke="#8884d8" fill="#8884d8" />
+                    <Area type="monotone" dataKey="Count" stroke="#8884d8" fill= "#8884d8" />
                 </AreaChart>
                 </ResponsiveContainer>
                 <Typography color="textSecondary" align={"center"}>

@@ -1,3 +1,7 @@
+## GOSH FHIRworks2020 React Dashboard
+
+An interactive web dashboard, aimed at hospital administrators, which pulls data from FHIR records and displays them graphically using React, Recharts and Material-UI.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

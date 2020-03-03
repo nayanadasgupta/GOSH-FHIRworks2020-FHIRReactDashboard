@@ -1,12 +1,8 @@
-var patientCount = 0;
-
 export function patientJSONtoList (rawPatients)
 {
     let patients = [];
     //104 bundles
     for (let i = 0; i < rawPatients.length; i++) {
-        console.log(rawPatients.count);
-        let patient = {};
         // iterating over each bundle
         let rawPatientsList = rawPatients[i];
         //looking at the entry part of each bundle
@@ -14,8 +10,7 @@ export function patientJSONtoList (rawPatients)
         //getting data of each patient in entry part
         for (let j = 0; j < rawEntries.length; j++)
         {
-            patientCount += 1;
-            // TODO: Check: Taking Medical Record Number to be ID!!!!!
+            let patient = {};
             patient['id'] = (rawEntries[j]['resource']['id']);
             if (rawEntries[j]['resource']['extension'][0]['url'] === 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')
             {
@@ -50,16 +45,15 @@ export function patientJSONtoList (rawPatients)
             }
             if (rawEntries[j]['resource']['identifier'][2]['type']['text'] === 'Social Security Number')
             {
-                patient['socialSecurity'] = rawEntries[j]['resource']['identifier'][2]['value'];
+                patient['socialSecurity'] = rawEntries[j]['resource']['identifier'][2]['value'].toString();
             }
-
             patient['familyName'] = rawEntries[j]['resource']['name'][0]['family'];
             // list of given names
             patient['givenNames'] = rawEntries[j]['resource']['name'][0]['given'];
             // list of prefixes
             patient['prefixes'] = rawEntries[j]['resource']['name'][0]['prefix'];
 
-            patient['phone'] = rawEntries[j]['resource']['telecom'][0]['value'];
+            patient['phone'] = rawEntries[j]['resource']['telecom'][0]['value'].toString();
 
             patient['gender'] = rawEntries[j]['resource']['gender'];
 
@@ -75,11 +69,11 @@ export function patientJSONtoList (rawPatients)
 
             patient['country'] = rawEntries[j]['resource']['address'][0]['country'];
 
-            patient['martial'] = rawEntries[j]['resource']['maritalStatus']['text'];
+            patient['marital'] = rawEntries[j]['resource']['maritalStatus']['text'];
 
             patient['language'] = rawEntries[j]['resource']['communication'][0]['language']['text'];
 
-            patients.push(patient)
+            patients.push(patient);
         }
     }
     return patients;
@@ -227,16 +221,6 @@ export function qualLifeRace(patientsList)
 }
 
 
-
-
-const https = require("https");
-const options = {
-    agent: new https.Agent({
-        rejectUnauthorized: false
-    })
-};
-
-// TODO: disLifeGender Graph
 
 
 

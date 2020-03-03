@@ -3,9 +3,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from "@material-ui/core/Button";
-
-import logo from './logo.svg';
 import './App.css';
 import Number from "./components/Number";
 import ChartPie from "./components/PieChart";
@@ -18,12 +15,8 @@ import {
 } from "./utils";
 import {findRaceProportions} from "./utils"
 import {findPatientCount} from "./utils";
-import IconButton from "@material-ui/core/IconButton";
-import MenuItem from "@material-ui/core/MenuItem";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import clsx from "clsx";
-import {Container} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 import ChartBar from "./components/ChartBar";
 import ChartArea from "./components/ChartArea";
@@ -36,8 +29,7 @@ const options = {
 };
 
 const drawerWidth = 240;
-
-const useStyles = makeStyles(theme => ({
+makeStyles(theme => ({
     root: {
         display: 'flex',
     },
@@ -94,8 +86,6 @@ const useStyles = makeStyles(theme => ({
         height: 240,
     },
 }));
-
-
 class App extends Component {
   constructor() {
       super();
@@ -137,6 +127,13 @@ class App extends Component {
                 </Grid>
             </Grid>
             <Grid container spacing={3}>
+                <Grid item xs = {12}>
+                    <Paper padding={2}>
+                        <ChartArea dataName = "Languages" data={findLanguageProportions(this.state.patients)}/>
+                    </Paper>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
                 <Grid item xs={6}>
                     <Paper padding={2}>
                         <ChartPie dataName = "Gender" data={findGenderProportions(this.state.patients)}/>
@@ -146,13 +143,6 @@ class App extends Component {
                     <Paper padding={2}>
                         <ChartBar dataName = "Average Quality Adjusted Life Years By Gender" data={qualLifeGender(this.state.patients)}/>
                     </Paper>
-                </Grid>
-                <Grid container spacing={3}>
-                    <Grid item xs = {12}>
-                        <Paper padding={2}>
-                            <ChartArea dataName = "Languages" data={findLanguageProportions(this.state.patients)}/>
-                        </Paper>
-                    </Grid>
                 </Grid>
                 <Grid container spacing={3}>
                     <Grid item xs = {12}>

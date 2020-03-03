@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c436984e-9589-469d-91b0-64112c135113" name="Default Changelist" comment="">
+    <list default="true" id="c436984e-9589-469d-91b0-64112c135113" name="Default Changelist" comment="Added Unit Tests and removed some bugs. All tests pass.">
+      <change afterPath="$PROJECT_DIR$/src/testfiles/patientsTest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChartArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChartArea.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChartBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChartBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Number.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Number.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PieChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,16 +45,71 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/testfiles" />
+      <recent name="$PROJECT_DIR$/testfiles" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
+    <configuration name="testDisLifeGenderProportions" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/utils.test.js" />
+      <test-names>
+        <test-name value="testDisLifeGenderProportions" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="testDisLifeRaceProportions" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/utils.test.js" />
+      <test-names>
+        <test-name value="testDisLifeRaceProportions" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="testQualLifeGenderProportions" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/utils.test.js" />
+      <test-names>
+        <test-name value="testQualLifeGenderProportions" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="testQualLifeRaceProportions" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/utils.test.js" />
+      <test-names>
+        <test-name value="testQualLifeRaceProportions" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -59,6 +123,25 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.testQualLifeRaceProportions" />
+        <item itemvalue="Jest.testDisLifeRaceProportions" />
+        <item itemvalue="Jest.testDisLifeGenderProportions" />
+        <item itemvalue="Jest.testQualLifeGenderProportions" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -75,7 +158,8 @@
       <workItem from="1583009439567" duration="152000" />
       <workItem from="1583078658733" duration="136000" />
       <workItem from="1583079038717" duration="244000" />
-      <workItem from="1583142892430" duration="6906000" />
+      <workItem from="1583142892430" duration="7378000" />
+      <workItem from="1583244969434" duration="8637000" />
     </task>
     <task id="LOCAL-00001" summary="Created react framework and started parser for fhir json.">
       <created>1582935626823</created>
@@ -98,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583009002811</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Bug Fixes and More Graphs">
+      <created>1583169588791</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583169588791</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,36 +199,46 @@
     <MESSAGE value="Created react framework and started parser for fhir json." />
     <MESSAGE value="Created dashboard with Patient Data" />
     <MESSAGE value="Added more data graphs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more data graphs" />
+    <MESSAGE value="Bug Fixes and More Graphs" />
+    <MESSAGE value="Added Unit Tests and removed some bugs. All tests pass." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Unit Tests and removed some bugs. All tests pass." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="295" y="55" key="CommitChangelistDialog2" timestamp="1583009002680">
+    <state x="295" y="55" key="CommitChangelistDialog2" timestamp="1583256307190">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="295" y="55" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583009002680" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1583168811508">
+    <state x="295" y="55" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583256307190" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1583256307213">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583168811508" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583256307213" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1582935763483" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1583168811507">
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1583174150113" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1583256307212">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583168811507" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583256307212" />
     <state width="1419" height="245" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1582935763483" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1583168811506">
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1583174150113" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1583256307212">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583168811506" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583256307212" />
     <state width="1419" height="245" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1582935763468" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1583168811507">
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1583174150112" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1583256307213">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583168811507" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583256307213" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1582935763483" />
-    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1583009013488">
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1583174150113" />
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1583169597757">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583009013488" />
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583169597757" />
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583249680587">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1583249680587" />
   </component>
 </project>
