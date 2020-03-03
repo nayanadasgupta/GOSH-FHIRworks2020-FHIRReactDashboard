@@ -2,7 +2,7 @@
 
 [![nayanadasgupta](https://circleci.com/gh/nayanadasgupta/GOSH-FHIRworks2020-FHIRReactDashboard.svg?style=svg&circle-token=41a91b1aba3814a078a6222af223380f6c06b396)](https://app.circleci.com/github/nayanadasgupta/GOSH-FHIRworks2020-FHIRReactDashboard/pipelines)
 
-An interactive web dashboard, aimed at hospital administrators, which pulls data from FHIR records and displays them graphically using React, Recharts and Material-UI.
+An interactive web dashboard, aimed at hospital administrators, which pulls data from FHIR records and displays them graphically using React, Recharts and Material-UI. Unit Tests are written using Jest.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
