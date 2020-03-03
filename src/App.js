@@ -110,7 +110,7 @@ class App extends Component {
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6">
-                        FHIR Overview
+                        FHIR Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>

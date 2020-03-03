@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c436984e-9589-469d-91b0-64112c135113" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +148,7 @@
       <workItem from="1583078658733" duration="136000" />
       <workItem from="1583079038717" duration="244000" />
       <workItem from="1583142892430" duration="7378000" />
-      <workItem from="1583244969434" duration="9522000" />
+      <workItem from="1583244969434" duration="10045000" />
     </task>
     <task id="LOCAL-00001" summary="Created react framework and started parser for fhir json.">
       <created>1582935626823</created>
@@ -199,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583256773001</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add CircleCI Badge">
+      <created>1583257422802</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1583257422802</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Edited README.">
+      <created>1583257496829</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1583257496829</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,41 +227,43 @@
     <MESSAGE value="Added Unit Tests and removed some bugs. All tests pass." />
     <MESSAGE value="Added CircleCI Config" />
     <MESSAGE value="New CircleCI Config" />
-    <option name="LAST_COMMIT_MESSAGE" value="New CircleCI Config" />
+    <MESSAGE value="Add CircleCI Badge" />
+    <MESSAGE value="Edited README." />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited README." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="295" y="55" key="CommitChangelistDialog2" timestamp="1583257422682">
+    <state x="295" y="55" key="CommitChangelistDialog2" timestamp="1583257496729">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="295" y="55" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583257422682" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1583256307213">
+    <state x="295" y="55" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583257496729" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1583257931978">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583256307213" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583257931978" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1582935763483" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1583174150113" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1583256307212">
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1583257931976">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583256307212" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583257931976" />
     <state width="1419" height="245" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1582935763483" />
     <state width="1419" height="245" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1583174150113" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1583256307212">
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1583257931976">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583256307212" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583257931976" />
     <state width="1419" height="245" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1582935763468" />
     <state width="1419" height="245" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1583174150112" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1583256307213">
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1583257931977">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583256307213" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583257931977" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1582935763483" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1583174150113" />
-    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1583257429803">
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1583257503528">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583257429803" />
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583257503528" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583249680587">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
