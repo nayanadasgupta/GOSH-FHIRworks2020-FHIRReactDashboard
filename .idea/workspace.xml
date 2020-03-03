@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c436984e-9589-469d-91b0-64112c135113" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +148,7 @@
       <workItem from="1583078658733" duration="136000" />
       <workItem from="1583079038717" duration="244000" />
       <workItem from="1583142892430" duration="7378000" />
-      <workItem from="1583244969434" duration="8885000" />
+      <workItem from="1583244969434" duration="9522000" />
     </task>
     <task id="LOCAL-00001" summary="Created react framework and started parser for fhir json.">
       <created>1582935626823</created>
@@ -185,7 +185,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583256322703</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added CircleCI Config">
+      <created>1583256572311</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583256572311</updated>
+    </task>
+    <task id="LOCAL-00007" summary="New CircleCI Config">
+      <created>1583256773001</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583256773001</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,13 +211,15 @@
     <MESSAGE value="Added more data graphs" />
     <MESSAGE value="Bug Fixes and More Graphs" />
     <MESSAGE value="Added Unit Tests and removed some bugs. All tests pass." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Unit Tests and removed some bugs. All tests pass." />
+    <MESSAGE value="Added CircleCI Config" />
+    <MESSAGE value="New CircleCI Config" />
+    <option name="LAST_COMMIT_MESSAGE" value="New CircleCI Config" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="295" y="55" key="CommitChangelistDialog2" timestamp="1583256572201">
+    <state x="295" y="55" key="CommitChangelistDialog2" timestamp="1583256772888">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="295" y="55" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583256572201" />
+    <state x="295" y="55" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583256772888" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1583256307213">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -228,10 +244,10 @@
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583256307213" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1582935763483" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1583174150113" />
-    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1583256578100">
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1583256796167">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583256578100" />
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583256796167" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583249680587">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
